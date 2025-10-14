@@ -221,7 +221,7 @@ const Portfolio = () => {
 
               <div className="p-4">
                 <h2 className="text-[24px] font-semibold mb-2 bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">
-                  Project One
+                  Solar Plexus
                 </h2>
                 <p className="text-gray-400">This project aims to simplify the process of scheduling solar panel evaluations for Los Angeles residents and city hall employees. The application supports two user roles: Residents: who submit appointment requests, and City Hall Employees: Who manage and optimize those requests.</p>
                 <p className="text-gray-400 text-[18px] font-bold mt-3">Username: Admin@solarplexus.com Password: Password123</p>
@@ -249,7 +249,7 @@ const Portfolio = () => {
 
               <div className="p-4">
                 <h2 className="text-[24px] font-semibold mb-2 bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">
-                  Project Two
+                  PlatePal
                 </h2>
                 <p className="text-gray-400">This project focuses on developing a menu scheduling application that allows managers to create and share weekly menus for staff workers. The application ensures employees have clear visibility of the planned meals while addressing specific dietary restrictions and allergies.</p>
               </div>
@@ -276,7 +276,9 @@ const Portfolio = () => {
               </div>
 
               <div className="p-4">
-                <h2 className="text-[24px] font-semibold mb-2 bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">Project Three</h2>
+                <h2 className="text-[24px] font-semibold mb-2 bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">
+                  AiQ
+                </h2>
                 <p className="text-gray-400">AiQ is an app that enhances the end-users' learning experience by helping them become better at building prompts and improving their proficiency in AI communication by
                   making AI responses more useful, accurate, and efficient while removing the frustration of bad AI responses with structured, meaningful interactions.</p>
               </div>
@@ -302,7 +304,9 @@ const Portfolio = () => {
               </div>
 
               <div className="p-4">
-                <h2 className="text-[24px] font-semibold mb-2 bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">Project Four</h2>
+                <h2 className="text-[24px] font-semibold mb-2 bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">
+                  PR Status Board
+                </h2>
                 <p className="text-gray-400">The PR Status Board is a web application built with React and Vite that helps developers and agile teams easily track open and closed Pull Requests in GitHub repositories.
                   By connecting to the GitHub API, users can search any public repository and view key PR data — all displayed through a clean, responsive, and intuitive interface.</p>
               </div>
