@@ -20,7 +20,7 @@ const Portfolio = () => {
   }
 
   const handleResumeLink = () => {
-    window.open("/Resume(Tech)OCT2025.pdf", "_blank");
+    window.open("/TECH-CV-Oct2025.pdf", "_blank");
   }
 
   const handleEmailLink = () => {
@@ -326,26 +326,45 @@ const Portfolio = () => {
         </div>
 
         <div className="flex flex-row gap-20 mt-20 w-full justify-center">
-          <button onClick={handleGitHubLink}
-          className="border-1 border-gray-600 rounded-full w-20 h-20 bg-gray-800 flex items-center justify-center text-white text-[40px] hover:text-[#07B6D5] transition-colors cursor-pointer duration-700 ease-in-out hover:shadow-[0_0_50px_rgba(00,100,600,2.5)] hover:border-1 hover:border-blue-500">
-            <FaGithubAlt />
-          </button>
+          <div>
+            <button
+            onClick={handleGitHubLink}
+            className="border-1 border-gray-600 rounded-full w-20 h-20 bg-gray-800 flex items-center justify-center text-white text-[40px] hover:text-[#07B6D5] transition-colors cursor-pointer duration-700 ease-in-out hover:shadow-[0_0_50px_rgba(00,100,600,2.5)] hover:border-1 hover:border-blue-500"
+            >
+              <FaGithubAlt />
+            </button>
+            <p className="text-white mt-1">GitHub</p>
+          </div>
 
-          <button onClick={handleLinkedInLink}
-          className="border-1 border-gray-600 rounded-full w-20 h-20 bg-gray-800 flex items-center justify-center text-white text-[40px] hover:text-[#07B6D5] transition-colors cursor-pointer duration-700 ease-in-out hover:shadow-[0_0_50px_rgba(00,100,600,2.5)] hover:border-1 hover:border-blue-500">
-            <FaLinkedinIn />
-          </button>
+          <div>
+            <button 
+            onClick={handleLinkedInLink}
+            className="border-1 border-gray-600 rounded-full w-20 h-20 bg-gray-800 flex items-center justify-center text-white text-[40px] hover:text-[#07B6D5] transition-colors cursor-pointer duration-700 ease-in-out hover:shadow-[0_0_50px_rgba(00,100,600,2.5)] hover:border-1 hover:border-blue-500"
+            >
+              <FaLinkedinIn />
+            </button>
+            <p className="text-white mt-1">LinkedIn</p>
+          </div>
 
-          <button onClick={handleResumeLink} 
-          className="border-1 border-gray-600 rounded-full w-20 h-20 bg-gray-800 flex items-center justify-center text-white text-[40px] hover:text-[#07B6D5] transition-colors cursor-pointer duration-700 ease-in-out hover:shadow-[0_0_50px_rgba(00,100,600,2.5)] hover:border-1 hover:border-blue-500">
-            <FaFileAlt />
-          </button>
+          <div>
+            <button 
+            onClick={handleResumeLink} 
+            className="border-1 border-gray-600 rounded-full w-20 h-20 bg-gray-800 flex items-center justify-center text-white text-[40px] hover:text-[#07B6D5] transition-colors cursor-pointer duration-700 ease-in-out hover:shadow-[0_0_50px_rgba(00,100,600,2.5)] hover:border-1 hover:border-blue-500"
+            >
+              <FaFileAlt />
+            </button>
+            <p className="text-white mt-1">Resume</p>
+          </div>
 
-          <button
+          <div>
+            <button
             onClick={handleEmailLink}
-            className="border border-gray-600 rounded-full w-20 h-20 bg-gray-800 flex items-center justify-center text-white text-[40px] hover:text-[#07B6D5] transition-all duration-700 ease-in-out cursor-pointer hover:shadow-[0_0_50px_rgba(7,182,213,0.6)] hover:border-blue-500">
-            <FaEnvelope />
-          </button>
+            className="border border-gray-600 rounded-full w-20 h-20 bg-gray-800 flex items-center justify-center text-white text-[40px] hover:text-[#07B6D5] transition-all duration-700 ease-in-out cursor-pointer hover:shadow-[0_0_50px_rgba(7,182,213,0.6)] hover:border-blue-500"
+            >
+              <FaEnvelope />
+            </button>
+            <p className="text-white mt-1">Email</p>
+          </div>
         </div>
 
         <div className="chingu-invite flex flex-col items-center gap-5">
