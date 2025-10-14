@@ -86,8 +86,12 @@ const Portfolio = () => {
         </p>
 
         <div className='mt-12 flex flex-row gap-5'>
-          <button className="h-15 w-50 font-semibold text-black bg-[#07B6D5] rounded-xl transition-shadow hover:shadow-[0_0_50px_rgba(7,182,400,0.5)]">View Projects</button>
-          <button className='border-1 border-[#07B6D5] h-15 w-50 font-semi-bold text-white bg-gray-800 rounded-xl transition-shadow hover:shadow-[0_0_50px_rgba(7,182,400,0.5)]'>Get in Touch</button>
+          <button className="h-15 w-50 font-semibold text-black bg-[#07B6D5] rounded-xl transition-shadow hover:shadow-[0_0_50px_rgba(7,182,400,0.5)]">
+            <a href='#projects' onClick={handleScroll} >View Projects</a>
+          </button>
+          <button className='border-1 border-[#07B6D5] h-15 w-50 font-semi-bold text-white bg-gray-800 rounded-xl transition-shadow hover:shadow-[0_0_50px_rgba(7,182,400,0.5)]'>
+             <a href='#contact' onClick={handleScroll}>Get In Touch</a>
+          </button>
         </div>
       </section>
 
