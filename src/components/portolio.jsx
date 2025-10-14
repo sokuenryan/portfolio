@@ -74,10 +74,10 @@ const Portfolio = () => {
           Frontend Developer at Chingu
         </p>
 
-        <h1 className="font-bold text-[110px] sm:text-[110px] md:text-[110px] text-6xl sm:text-7xl md:text-[110px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text text-center leading-tight sm:leading-tight md:leading-tight">
+        <h1 className="font-bold text-[110px] sm:text-[110px] text-6xl sm:text-7xl md:text-[110px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text text-center leading-tight sm:leading-tight md:leading-tight">
           <span className="block sm:inline">Hi, I'm </span>
-          <span className="block sm:inline">Zephyrus </span>
-          <span className="block sm:inline">Koryami</span>
+          <span className="block sm:inline">Sokuen </span>
+          <span className="block sm:inline">Ryan</span>
         </h1>
 
         <p className="w-full text-gray-400 text-[30px] mt-10">
