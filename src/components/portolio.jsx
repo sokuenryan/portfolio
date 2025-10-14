@@ -47,7 +47,7 @@ const Portfolio = () => {
 };
 
   return (
-    <div className='portfolio w-full h-full bg-[#0F1B2D] '>
+    <div className='portfolio w-full h-full bg-[#0F1B2D] flex flex-grow flex-col items-center text-center overflow-x-hidden'>
       {/* Navbar */}    
       <div className={`h-20 fixed top-0 left-0 w-full flex justify-between items-center bg-[#0F1B2D]/10 backdrop-blur-lg text-white transition-all duration-300 z-50
         ${scrolled ? "border-b border-gray-500 border-opacity-100" : "border-gray-500 border-opacity-0"}
