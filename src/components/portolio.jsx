@@ -67,11 +67,11 @@ const Portfolio = () => {
 
       {/* Home Section */}
       <section id='home' className='h-screen flex flex-col items-center text-center'>
-        <p className='mt-40 text-[20px] text-gray-400 border-1 border-gray-600 rounded-2xl w-100 h-15 flex items-center justify-center'>
+        <p className='mt-40 text-[20px] text-gray-400 border-1 border-gray-600 rounded-2xl w-80 h-11 flex items-center justify-center'>
           Frontend Developer at Chingu
         </p>
 
-        <h1 className='h-45 font-bold text-[130px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
+        <h1 className='h-40 font-bold text-[110px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
           Hi, I'm Zephyrus Koryami
         </h1>
 
@@ -343,8 +343,7 @@ const Portfolio = () => {
               <div className="p-4">
                 <h2 className="text-[24px] font-semibold mb-2 bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">Project Four</h2>
                 <p className="text-gray-400">The PR Status Board is a web application built with React and Vite that helps developers and agile teams easily track open and closed Pull Requests in GitHub repositories.
-
-By connecting to the GitHub API, users can search any public repository and view key PR data — all displayed through a clean, responsive, and intuitive interface.</p>
+                  By connecting to the GitHub API, users can search any public repository and view key PR data — all displayed through a clean, responsive, and intuitive interface.</p>
               </div>
             </div>
           </div>
@@ -352,7 +351,7 @@ By connecting to the GitHub API, users can search any public repository and view
       </section>
 
       {/* Contact Section */}
-      <section id='contact' className='h-screen pt-25 flex flex-col items-center text-center mt-170'>
+      <section id='contact' className='h-screen pt-60 flex flex-col items-center text-center mt-170'>
         <div className="header w-full flex flex-col items-center justify-center">
           <h1 className='font-bold text-[70px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
             Let's Connect
@@ -362,7 +361,7 @@ By connecting to the GitHub API, users can search any public repository and view
               I'm always interested in hearing about new projects and opportunities.<br />
               Whether you have a question or just want to say hi, feel free to reach out!
             </p>
-          </div>
+        </div>
 
         <div className="flex flex-row gap-20 mt-20 w-full justify-center">
           <button onClick={handleGitHubLink}
