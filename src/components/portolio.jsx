@@ -194,7 +194,7 @@ const Portfolio = () => {
         <div className="w-full flel justify-center items-center projects-showcase flex flex-col">
           <div className="project-set-one lg:w-300 lg:gap-6 lg:mt-10 flex lg:flex-row lg:justify-between md:w-full md:gap-5 md:mt-8 md:flex-col md:items-center">
             {/* SolarPlexus Project Section */}
-            <div className="SolarPlexus lg:w-[50%] md:w-[80%] lg:h-135 md:h-135 md:mb-10 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
+            <div className="SolarPlexus lg:w-[50%] md:w-[80%] lg:h-135 md:h-135 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
               <div className="h-[60%] w-full overflow-hidden">
                 <img
                   src={SolarPlexus}
