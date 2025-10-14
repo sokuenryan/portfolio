@@ -49,30 +49,35 @@ const Portfolio = () => {
   return (
     <div className='portfolio w-full h-full bg-[#0F1B2D] flex flex-grow flex-col items-center text-center overflow-x-hidden'>
       {/* Navbar */}    
-      <div className={`h-20 fixed top-0 left-0 w-full flex justify-between items-center bg-[#0F1B2D]/10 backdrop-blur-lg text-white transition-all duration-300 z-50
-        ${scrolled ? "border-b border-gray-500 border-opacity-100" : "border-gray-500 border-opacity-0"}
-      `}>
+      <div className={`h-20 fixed top-0 left-0 w-full flex justify-between items-center px-5 pr-8 bg-[#0F1B2D]/10 backdrop-blur-lg text-white transition-all duration-300 z-50
+            ${scrolled ? "border-b border-gray-500 border-opacity-100" : "border-gray-500 border-opacity-0"}
+          `}>
 
-        <h1 className="ml-5 font-bold text-[30px] bg-gradient-to-r from-blue-500 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+        {/* Site Title */}
+        <h1 className="font-bold text-[30px] bg-gradient-to-r from-blue-500 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text flex-shrink-0">
           Portfolio
         </h1>
-      
-        <div className='flex flex-row gap-6 m-5 text-[22px] font-bold'>
+
+        {/* Navbar Links */}
+        <div className='flex flex-row gap-6 text-[22px] font-bold flex-shrink justify-end max-w-[90vw]'>
           <a href='#home' onClick={handleScroll} className="relative text-white hover:text-[#07B6D5] after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#07B6D5] after:transition-all after:duration-500 hover:after:w-full">Home</a>
           <a href='#about' onClick={handleScroll} className="relative text-white hover:text-[#07B6D5] after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#07B6D5] after:transition-all after:duration-500 hover:after:w-full">About</a>
           <a href='#projects' onClick={handleScroll} className="relative text-white hover:text-[#07B6D5] after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#07B6D5] after:transition-all after:duration-500 hover:after:w-full">Projects</a>
           <a href='#contact' onClick={handleScroll} className="relative text-white hover:text-[#07B6D5] after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#07B6D5] after:transition-all after:duration-500 hover:after:w-full">Contact</a>
         </div>
+
       </div>
 
       {/* Home Section */}
-      <section id='home' className='h-screen flex flex-col items-center text-center'>
+      <section id='home' className=' min-h-screen flex flex-col items-center text-center'>
         <p className='mt-40 text-[20px] text-gray-400 border-1 border-gray-600 rounded-2xl w-80 h-11 flex items-center justify-center'>
           Frontend Developer at Chingu
         </p>
 
-        <h1 className='h-40 font-bold text-[110px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
-          Hi, I'm Zephyrus Koryami
+        <h1 className="font-bold text-[110px] sm:text-[110px] md:text-[110px] text-6xl sm:text-7xl md:text-[110px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text text-center leading-tight sm:leading-tight md:leading-tight">
+          <span className="block sm:inline">Hi, I'm </span>
+          <span className="block sm:inline">Zephyrus </span>
+          <span className="block sm:inline">Koryami</span>
         </h1>
 
         <p className="w-full text-gray-400 text-[30px] mt-10">
@@ -87,7 +92,7 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section id='about' className='h-screen pt-20 flex flex-col'>
+      <section id='about' className='min-h-screen pt-20 flex flex-col'>
         <div className="header w-full flex justify-center flex-col items-center">
           <h1 className='font-bold text-[70px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
             About Me
@@ -96,147 +101,100 @@ const Portfolio = () => {
         </div>
 
         <div className='about-content flex flex-col w-full text-gray-400 text-[22px]'>
-          <div className='about-summary flex flex-row text-gray-400 text-[22px] w-full mt-10 justify-center gap-20'>
-            <div className="profile-pic flex justify-center items-end ml-60">
-              <img src={ProfilePic} alt="Profile Picture" className="w-100 h-100 rounded-full border-4 border-[#07B6D5] mb-5" />
+          <div className="about-summary flex flex-col lg:flex-row justify-center items-center w-full mt-10 gap-10 px-5">
+            
+            {/* Profile Image */}
+            <div className="profile-pic flex justify-center items-center">
+              <img
+                src={ProfilePic}
+                alt="Profile Picture"
+                className="w-95 h-95 rounded-full border-4 border-[#07B6D5] mb-5"
+              />
             </div>
-            <div className='about-summary flex flex-col text-gray-400 text-[22px] mt-5 w-180'>
-              <p className='text-gray-400 text-[22px] mt-5'>
+
+            {/* Summary Text */}
+            <div className="flex flex-col justify-start text-gray-400 text-[22px] max-w-[600px]">
+              <p className="mt-5">
                 I'm a passionate frontend developer at Chingu, where I<br/>
                 collaborate with talented developers worldwide to build amazing web applications.
               </p>
-              <p className='mt-5'>
+              <p className="mt-5">
                 With a keen eye for design and a love for clean code, I transform<br/>
                 ideas into engaging digital experiences. I specialize in React, modern CSS, and creating responsive, 
                 accessible interfaces that users love.
               </p>
-              <p className='mt-5'> 
+              <p className="mt-5"> 
                 When I'm not coding, I'm learning new technologies, contributing to open source, or sharing knowledge
                 with the developer community.
               </p>
             </div>
-          </div>
-          
-          <div className="about-skills w-full mt-10 ml-20">
-            <div className="skillset-content flex flex-row gap-20 justify-center items-center">
-              <div className="skillsets-chingu">
-                <div className="header-chingu w-full flex justify-center">
-                  <h1 className='font-bold text-[40px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
-                    Chingu.io Tech Stack
-                  </h1>
-                </div>
 
-                <div className="chingu-skills-1 mt-5 flex flex-row gap-3 justify-center items-center w-full">
-                  <p className="font-bold border border-white rounded-full w-30 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    React
-                  </p>
-                  <p className="font-bold border border-white rounded-full w-40 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    Tailwind CSS
-                  </p>
-                  <p className="font-bold border border-white rounded-full w-50 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    API Integration
-                  </p>
-                </div>
-
-                <div className="chingu-skills-2 w-full mt-5 flex flex-row gap-3 items-center justify-center">
-                  <p className="font-bold border border-white rounded-full w-20 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    Git
-                  </p>
-                  <p className="font-bold border border-white rounded-full w-60 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    Responsive Design
-                  </p>
-                  <p className="font-bold border border-white rounded-full w-45 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    Agile/Scrum
-                  </p>
-                </div>
-              </div>
-
-              <div className="skillsets-bottega">
-                <div className="header-bottega flex w-full justify-center">
-                  <h1 className='font-bold text-[40px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
-                      Bottega University
-                  </h1>
-                </div>
-
-                <div className="bottega-skills-1 font-bold mt-5 flex flex-row gap-3 justify-center items-center w-full">
-                  <p className="font-bold border border-white rounded-full w-40 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    Full Stack
-                  </p>
-                  <p className="border border-white rounded-full w-30 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    Python
-                  </p>
-                  <p className="font-bold border border-white rounded-full w-40 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    JavaScript
-                  </p>
-                </div>
-
-                <div className="bottega-skills-2 mt-5 flex flex-row gap-3 justify-center items-center w-full">
-                  <p className="font-bold border border-white rounded-full w-20 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    SQL
-                  </p>
-                  <p className="font-bold border border-white rounded-full w-40 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    MongoDB
-                  </p>
-                  <p className="font-bold border border-white rounded-full w-25 h-10 flex justify-center hover:font-bold hover:text-white hover:bg-gradient-to-r hover:from-[#07B6D5] hover:to-purple-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] transition duration-500">
-                    UML
-                  </p>  
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
-        <div className="about-boxes flex flex-row justify-center gap-25 mt-40">
-          <div className="box1 w-70 h-60 bg-gray-800 rounded-xl flex flex-col justify-center hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-shadow">
-            <FaCode className="ml-8 mb-3 text-[#07B6D5] text-[48px]" />
-            <h1 className="ml-8 font-bold text-[20px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">
+        <div className="about-boxes flex flex-col lg:flex-row justify-center gap-6 mt-20 px-5">
+          {/* Box 1 */}
+          <div className="box1 w-full lg:w-70 h-60 bg-gray-800 rounded-xl flex flex-col justify-center items-center lg:items-start hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-shadow">
+            <FaCode className="mb-3 text-[#07B6D5] text-[48px] lg:ml-8" />
+            <h1 className="font-bold text-[20px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text lg:ml-8">
               Clean Code
             </h1>
-            <p className="ml-8 mr-5 text-gray-400 text-[15px]">Writing maintainable, scalable code following best practices and industry standards.</p>
+            <p className="text-gray-400 text-[15px] text-center lg:text-left mt-1 lg:ml-8 lg:mr-5">
+              Writing maintainable, scalable code following best practices and industry standards.
+            </p>
           </div>
 
-          <div className="box2 w-70 h-60 bg-gray-800 rounded-xl flex flex-col justify-center hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-shadow">
-            <FaPalette className="ml-8 mb-3 text-[#07B6D5] text-[48px]" />
-            <h1 className="ml-8 font-bold text-[20px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">
+          {/* Box 2 */}
+          <div className="box2 w-full lg:w-70 h-60 bg-gray-800 rounded-xl flex flex-col justify-center items-center lg:items-start hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-shadow">
+            <FaPalette className="mb-3 text-[#07B6D5] text-[48px] lg:ml-8" />
+            <h1 className="font-bold text-[20px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text lg:ml-8">
               UI/UX Focus
             </h1>
-            <p className="ml-8 mr-5 text-gray-400 text-[15px]">Crafting intuitive interfaces with attention to detail and user experience.</p>
+            <p className="text-gray-400 text-[15px] text-center lg:text-left mt-1 lg:ml-8 lg:mr-5">
+              Crafting intuitive interfaces with attention to detail and user experience.
+            </p>
           </div>
 
-          <div className="box3 w-70 h-60 bg-gray-800 rounded-xl flex flex-col justify-center hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-shadow">
-            <FaBoltLightning className="ml-8 mb-3 text-[#07B6D5] text-[48px]" />
-            <h1 className="ml-8 font-bold text-[20px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">
+          {/* Box 3 */}
+          <div className="box3 w-full lg:w-70 h-60 bg-gray-800 rounded-xl flex flex-col justify-center items-center lg:items-start hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-shadow">
+            <FaBoltLightning className="mb-3 text-[#07B6D5] text-[48px] lg:ml-8" />
+            <h1 className="font-bold text-[20px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text lg:ml-8">
               Performance
             </h1>
-            <p className="ml-8 mr-5 text-gray-400 text-[15px]">Optimizing applications for speed, accessibility, and seamless interactions.</p>
+            <p className="text-gray-400 text-[15px] text-center lg:text-left mt-1 lg:ml-8 lg:mr-5">
+              Optimizing applications for speed, accessibility, and seamless interactions.
+            </p>
           </div>
 
-          <div className="box4 w-70 h-60 bg-gray-800 rounded-xl flex flex-col justify-center hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-shadow">
-            <FaPeopleGroup className="ml-8 mb-3 text-[#07B6D5] text-[48px]" />
-            <h1 className="ml-8 font-bold text-[20px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text">
+          {/* Box 4 */}
+          <div className="box4 w-full lg:w-70 h-60 bg-gray-800 rounded-xl flex flex-col justify-center items-center lg:items-start hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] transition-shadow">
+            <FaPeopleGroup className="mb-3 text-[#07B6D5] text-[48px] lg:ml-8" />
+            <h1 className="font-bold text-[20px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text lg:ml-8">
               Collaboration
             </h1>
-            <p className="ml-8 mr-5 text-gray-400 text-[15px]">Working effectively in teams through Chingu and other collaborative platforms.</p>
+            <p className="text-gray-400 text-[15px] text-center lg:text-left mt-1 lg:ml-8 lg:mr-5">
+              Working effectively in teams through Chingu and other collaborative platforms.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id='projects' className='h-screen pt-25 flex flex-col items-center text-center mt-120'>
-        <div className="header w-full flex justify-center flex-col items-center">
-          <h1 className='font-bold text-[70px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
+      <section id='projects' className='min-h-screen pt-25 flex flex-col items-center text-center'>
+        <div className="header w-full flex justify-center flex-col items-center px-5">
+          <h1 className='font-bold text-[70px] md:text-[50px] sm:text-[40px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text text-center'>
             Featured Projects
           </h1>
           <div className='w-20 h-1 bg-gradient-to-r from-[#07B6D5] to-purple-500 mt-2 rounded-full'></div>
-          <p className="text-white text-[20px] mt-20">
+          <p className="text-white text-[20px] md:text-[18px] sm:text-[16px] mt-20 max-w-[800px] text-center">
             A selection of projects showcasing my skills in frontend development and problem-solving.
           </p>
         </div>
 
         <div className="w-full flel justify-center items-center projects-showcase flex flex-col">
-          <div className="w-300 project-set-one gap-6 mt-10 flex flex-row justify-between">
+          <div className="project-set-one lg:w-300 lg:gap-6 lg:mt-10 flex lg:flex-row lg:justify-between md:w-full md:gap-5 md:mt-8 md:flex-col md:items-center">
             {/* SolarPlexus Project Section */}
-            <div className="SolarPlexus w-[50%] h-135 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
+            <div className="SolarPlexus lg:w-[50%] md:w-[80%] lg:h-135 md:h-135 md:mb-10 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
               <div className="h-[60%] w-full overflow-hidden">
                 <img
                   src={SolarPlexus}
@@ -267,7 +225,7 @@ const Portfolio = () => {
             </div>
 
             {/* PlatePal Project */}
-            <div className="PlatePal w-[50%] h-135 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
+            <div className="PlatePal lg:w-[50%] md:w-[80%] lg:h-135 md:h-150 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
               <div className="h-[60%] w-full overflow-hidden">
                 <img
                   src={PlatePal}
@@ -294,9 +252,8 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="w-300 project-set-two gap-6 mt-10 flex flex-row justify-between">
-            {/* AiQ Project Section */}
-            <div className="AiQ w-[50%] h-135 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
+          <div className="project-set-one lg:w-300 lg:gap-6 lg:mt-10 flex lg:flex-row lg:justify-between md:w-full md:gap-5 md:mt-8 md:flex-col md:items-center">
+            <div className="AiQ lg:w-[50%] md:w-[80%] lg:h-135 md:h-135 md:mb-10 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
               <div className="h-[60%] w-full overflow-hidden">
                 <img
                   src={AiQ}
@@ -322,7 +279,7 @@ const Portfolio = () => {
             </div>
 
             {/* PR Status Project */}
-            <div className="PRStatus w-[50%] h-135 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
+            <div className="PRStatus lg:w-[50%] md:w-[80%] lg:h-135 md:h-135 md:mb-10 relative group bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-[#07B6D5] transition-all duration-500">
               <div className="h-[60%] w-full overflow-hidden">
                 <img
                   src={PRStatus}
@@ -348,13 +305,14 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+
       </section>
 
       {/* Contact Section */}
-      <section id='contact' className='h-screen pt-60 flex flex-col items-center text-center mt-170'>
+      <section id='contact' className='min-h-screen pt-25 flex flex-col items-center text-center mb-10'>
         <div className="header w-full flex flex-col items-center justify-center">
           <h1 className='font-bold text-[70px] bg-gradient-to-r from-[#07B6D5] to-purple-500 inline-block text-transparent bg-clip-text'>
-            Let's Connect
+            Let's Connect!
           </h1>
           <div className='w-20 h-1 bg-gradient-to-r from-[#07B6D5] to-purple-500 mt-2 rounded-full'></div>
             <p className="text-white text-[25px] mt-10">
@@ -397,6 +355,7 @@ const Portfolio = () => {
         </div>
       </section>
       
+      {/* Footer Section */}
       <footer className='border-t border-gray-700 w-full h-25 bg-gray-900 flex flex-col justify-center items-center'>
         <p className='text-white text-[20px]'>
           &copy; {new Date().getFullYear()} [Sokuen Ryan]. Built with React and Tailwind CSS.
