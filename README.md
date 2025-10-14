@@ -1,3 +1,3 @@
 # Portfolio
 
-This is my portfolio draft one 
+This is my portfolio
